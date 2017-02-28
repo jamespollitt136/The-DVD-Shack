@@ -1,0 +1,12 @@
+<?php require('template/header.phtml') ?>
+    <div id = "findGenre">
+        <h3>Filter by Genre</h3>
+        <form action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+            <label>Genre:</label>
+            <input type = "text" name = "genre" value="<?php echo $_POST['genre'];?>" required/>
+            <input type = "submit" value = "Search" name = "searchGenre"/>
+        </form>
+    </div>
+
+<?php require('template/footer.phtml') ?>
+

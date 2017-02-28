@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - sta302_ssp@helios.csesalford.com" uuid="87610e25-e78c-473d-b145-550ce6e44bdc">
+      <secret-storage>memory</secret-storage>
+      <user-name>sta302</user-name>
+      <schema-pattern>sta302_ssp.*</schema-pattern>
+      <default-schemas>sta302_ssp.*</default-schemas>
+    </data-source>
+  </component>
+</project>

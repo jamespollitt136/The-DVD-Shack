@@ -1,0 +1,17 @@
+<?php require('template/header.phtml'); ?>
+
+<div id="adminlogin">
+    <h3>Log in as administrator</h3>
+    <form action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+        <label>Username:</label>
+        <input type ="email" name = "adminName" placeholder="User Name" value="<?php echo $_POST['adminName'];?>"/>
+
+        <label>Password</label>
+        <input type ="password" name="adminPass" placeholder="Password" value="<?php echo $_POST['adminPass'];?>"/>
+
+        <input type = "submit" value="Sign In" name="adminSignIn"/>
+        <input type = "submit" value="Sign Out" name="adminSignOut"/>
+    </form>
+</div>
+
+<?php require('template/footer.phtml');?>

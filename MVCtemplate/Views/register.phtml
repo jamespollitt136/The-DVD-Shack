@@ -1,0 +1,31 @@
+<?php require('template/header.phtml'); ?>
+
+<div id = "signup">
+    <h4>Sign up below: </h4>
+    <form action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+        <label>Username(Email Address):</label> <br>
+        <input type="email" name="nameUser" placeholder="e.g. johnsmith@email.com" value="<?php echo $_POST['nameUser'];?>" required/><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="pass" placeholder="Password" value = "<?php echo $_POST['pass']; ?>" required/> <br>
+
+        <label>Home Address:</label><br>
+        <input type="text" name="address" placeholder="e.g. 1 Salford Street" value="<?php echo $_POST['address'];?>" required/><br>
+
+        <label>City:</label><br>
+        <input type="text" name="city" placeholder="e.g. Manchester" value="<?php echo $_POST['city'];?>" required/><br>
+
+        <label>Mobile Number:</label><br>
+        <input type="text" name="mobile" placeholder="e.g. 07852426942" value="<?php echo $_POST['mobile'];?>" required/><br>
+
+        <input type="submit" value="Sign Up" name="signUp"/>
+    </form>
+</div>
+
+<?php if(isset($_POST['signUp']))
+{
+    ?> <p>Now please sign in</p>
+    <a href="login.php"><input type="submit" value="Sign In" name="signInFromReg"/></a> <?php
+}
+
+require('template/footer.phtml'); ?>

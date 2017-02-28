@@ -1,0 +1,71 @@
+<?php require('template/header.phtml') ?>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <h3>All DVD's</h3>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Poster</th>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Synopsis</th>
+                    <th>Basket</th>
+                    <th>Photo's</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($view -> DVDDataSet as $dvdData):?>
+                    <tr>
+                        <td>
+                            <?php if($dvdData->getPhoto()!==""):?>
+                                <img class="smallimage" src="images/<?=htmlentities($dvdData->getPhoto());?>"/>
+                            <?php else:?>
+                                No Photo Attached
+                            <?php endif;?>
+                        </td>
+                        <td>
+                            <?php echo $dvdData -> getDVDName();?>
+                        </td>
+                        <td>
+                            <?php echo $dvdData -> getDirector();?>
+                        </td>
+                        <td>
+                            <?php echo $dvdData -> getGenre();?>
+                        </td>
+                        <td>
+                            <?php echo $dvdData -> getYear();?>
+                        </td>
+                        <td>
+                            <?php echo '£'.$dvdData -> getPrice();?>
+                        </td>
+                        <td>
+                            <?php echo $dvdData -> getSynopsis();?>
+                        </td>
+                        <td>
+                            <p><a href="basket.php?name=<?php echo $dvdData->getDVDName();?>&price=<?php echo $dvdData->getPrice();?>">Add to basket</a></p>
+                        </td>
+                        <td>
+                            <?php if($dvdData->getSecondPhoto()!==""):?>
+                                <img class="smallimage" src="images/<?=htmlentities($dvdData->getSecondPhoto());?>"/>
+                            <?php else:?>
+                                No Second Photo Attached
+                            <?php endif;?>
+                            <?php if($dvdData->getThirdPhoto()!==""):?>
+                                <img class="smallimage" src="images/<?=htmlentities($dvdData->getThirdPhoto());?>"/>
+                            <?php else:?>
+                                No Third Photo Attached
+                            <?php endif;?>
+                            <?php if($dvdData->getFourthPhoto()!==""):?>
+                                <img class="smallimage" src="images/<?=htmlentities($dvdData->getFourthPhoto());?>"/>
+                            <?php else:?>
+                                No Fourth Photo Attached
+                            <?php endif;?>
+                        </td>
+                    </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
+    </form>
+<?php require('template/footer.phtml') ?>

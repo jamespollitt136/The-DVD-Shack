@@ -1,0 +1,13 @@
+<?php require('template/header.phtml') ?>
+<div id = "findDirector">
+    <h3>Filter by Director</h3>
+    <form action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+        <label>Director Name</label>
+        <input type = "text" name = "directorName" value = "<?php echo $_POST['directorName']; ?>" required/>
+        <input type = "submit" value = "Search" name = "searchDirector"/>
+    </form>
+</div>
+<?php require('template/footer.phtml') ?>
+
+
+

@@ -1,0 +1,35 @@
+<?php require('template/header.phtml') ?>
+    <h3>Your Basket</h3>
+<div id="basket"
+<div>
+<table class = "table table-bordered table-striped">
+    <thead>
+        <th>Title</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+    <?php foreach ($view->returnBasket as $basketData):?>
+        <tr>
+            <td><?php echo $basketData->getDVDName();?></td>
+            <td><?php echo $basketData->getPrice();?></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+</div>
+
+<div id="purchase"
+    <div>
+<form>
+    <input type = "submit" value = "Purchase" name = "purchase"/>
+    <?php if(isset($_POST['purchase']))
+    {
+        $sqlQuery = "UPDATE DVDList
+        SET Stock = 0, Client = '". $_SESSION['userName'] ."'
+        WHERE DVD_Name = '". $_COOKIE['name']." ' ";
+        echo "Thank you for purchasing from The DVD Shack";
+    }
+    ?>
+</form>
+     </div>
+<?php require_once('template/footer.phtml'); ?>

@@ -1,0 +1,17 @@
+<?php require('template/header.phtml')
+/**
+ * Created by PhpStorm.
+ * User: sta302
+ * Date: 08/01/16
+ * Time: 10:14
+ */
+?>
+    <div id = "findCast">
+        <h3>Filter by Cast Members</h3>
+        <form action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+            <label>Cast Member Name:</label>
+            <input type = "text" name = "castName" value = "<?php echo $_POST['castName']; ?>" required/>
+            <input type = "submit" value = "Search" name = "searchCast"/>
+        </form>
+    </div>
+<?php require('template/footer.phtml') ?>

@@ -1,0 +1,12 @@
+<?php require('template/header.phtml') ?>
+
+<div id = "findYear">
+    <h3>Filter by Year</h3>
+    <form action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+        <label>Year:</label>
+        <input type = "text" name = "year" value="<?php echo $_POST['year'];?>" required/>
+        <input type = "submit" value = "Search" name = "searchYear"/>
+    </form>
+</div>
+
+<?php require('template/footer.phtml') ?>

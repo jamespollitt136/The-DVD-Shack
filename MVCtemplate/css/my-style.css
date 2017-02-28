@@ -1,0 +1,55 @@
+#title
+{
+    margin-top: 12px;
+    background-color: #000; /*title area*/
+    color: #fff; /*text colour*/
+}
+
+#menu
+{
+    border-top: solid 6px #000;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    height: 650px;
+    display: inline;
+}
+
+#menu a
+{
+    background-color: #000; /* set background colour */
+    color: #fff; /* Text colour */
+    text-decoration: none;
+}
+
+#menu a:hover
+{
+    background-color: #202020 ;  /* background of menu item turns to this colour when hovering */
+    color: #fff; /* Text colour */
+    text-decoration:underline; /* underlines text*/
+}
+
+#content
+{
+    background-color: #fff;  /* content area where all text is */
+    border-top: solid 6px #000;
+}
+
+#footer
+{
+    margin_top: 20px;  /* bottom of the page*/
+    text-align: center;
+    background-color: #000;
+    color: #fff;  /* Text colour */
+    height: 150px;
+}
+
+a:link
+{
+    color: red; /*link colour */
+}
+
+a:visited
+{
+    color: red; /*used link colour */
+}
